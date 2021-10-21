@@ -1,20 +1,37 @@
 # Define colour palette variables and functions here
 
-NAME_colours <- list(
+stain_colours <- list(
   # add your colours as a named list here, i.e.
-  "pink" = "#ea5f94"
+  "lemon"     = "#FCF404",
+  "pink"      = "#EC3C7C",
+  "teal"      = "#057277",
+  "tan"       = "#9C8877",
+  "skin"      = "#C9A58C",
+  "wood"      = "#52292A"
 )
 
+stain_palette <- function(
+  primary = "lemon",
+  other = "wood",
+  direction = 1
+) {
+  stopifnot(primary %in% names(stain_colours))
 
-NAME_palette <- function(direction = 1) {
-  # the palette function returns a function,
-  # so it would be called like NAME_palette()(2) to generate
-  # your palette with two colours
   function(n) {
-    # a warning or an error should be presented if n is larger
-    # the length of NAME_colours
+    if (n > 6) warning("n is larger than the number of colours in stain palette.")
 
-    # if direction is less than 1 reverse the ordering of the
-    # palette
+    if (n == 2) {
+      other <- if (!other %in% names(stain_colours)) {
+        other
+      } else {
+        stain_colours[other]
+      }
+      color_list <- c(other, stain_colours[primary])
+    } else {
+      color_list <- stain_colours[1:n]
+    }
+
+    color_list <- unname(unlist(color_list))
+    if (direction >= 0) color_list else rev(color_list)
   }
 }
