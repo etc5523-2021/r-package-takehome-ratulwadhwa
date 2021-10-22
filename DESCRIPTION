@@ -1,5 +1,5 @@
 Package: pigment
-Title: What the Package Does (One Line, Title Case)
+Title: The R Package Provides Access To Six Regular Colors
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Ratul",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "rwad0002@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Pigment is a substance, which leaves a stain/color when mixed. The goal of pigment is to provide access to some regular day to day colors. The package pigment has one palette, stain which includes six colors like yellow, shades of brown like skin, wood and tan, along with 2 different colors like teal and dark pink.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
