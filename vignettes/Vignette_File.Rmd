@@ -21,10 +21,21 @@ library(ggplot2)
 library(palmerpenguins)
 ```
 
+**The below plot gives an overview of Stain palette, and the colours that are in it**
+
 ```{r}
 library(unikn)
-seecol("stain_colours")
+names("stain_colours")
 ```
+
+  "lemon"     = "#FCF404",
+  "pink"      = "#EC3C7C",
+  "teal"      = "#057277",
+  "tan"       = "#9C8877",
+  "skin"      = "#C9A58C",
+  "wood"      = "#52292A"
+  
+The above list shows the 6 different colors with their hex-code which are present in the palette **stain**, the colors used in the palette are the few day to day ordinary colors.
 
 ```{r}
 library(unikn)
@@ -35,26 +46,35 @@ dat <- matrix(sample(5:10, size = 10, replace = TRUE), ncol = 3)
 barplot(dat, beside = TRUE, col = my_pair)
 ```
 
-```{r}
-ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = species)) +
-  geom_col() +
+Visual representation of the Color palette.
+
+**Example of Discrete Color**
+
+```{r warning=FALSE, message=FALSE}
+ggplot(penguins, aes(year, bill_length_mm, color = species)) +
+  geom_bar(stat="identity", size=.3) +
 pigment::scale_color_stain_d()+
-  labs(title = "color")
+  theme_bw()+
+  labs(title = "Example of Discrete Color")
 ```
 
+**Example of Continuous Color**
 
-```{r}
-ggplot(penguins, aes(body_mass_g, flipper_length_mm, colour = body_mass_g)) +
+```{r warning=FALSE, message=FALSE}
+ggplot(penguins, aes(bill_length_mm, bill_depth_mm, colour = body_mass_g)) +
   geom_point() +
+   theme_bw()+
 pigment::scale_colour_stain_seq_c("wood")+
-  labs(title = "Conti")
+  labs(title = "Example of Continuous Color")
 
 ```
 
+**Example of Discrete Fill**
 
-```{r}
-ggplot(penguins, aes(body_mass_g, flipper_length_mm, fill = species)) +
-  geom_col() +
+```{r warning=FALSE, message=FALSE}
+ggplot(penguins, aes(year, fill = species)) +
+  geom_bar() +
+   theme_bw()+
 pigment::scale_fill_stain_d(direction = -1)+
-  labs(title = "fill")
+  labs(title = "Example of Discrete Fill")
 ```
