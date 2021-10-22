@@ -1,0 +1,60 @@
+---
+title: "Vignette_File"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette_File}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pigment)
+library(tidyverse)
+library(ggplot2)
+library(palmerpenguins)
+```
+
+```{r}
+library(unikn)
+seecol("stain_colours")
+```
+
+```{r}
+library(unikn)
+my_pair <- seecol(stain_colours, n = 6)
+
+dat <- matrix(sample(5:10, size = 10, replace = TRUE), ncol = 3)
+# Plot in my_pair colors:
+barplot(dat, beside = TRUE, col = my_pair)
+```
+
+```{r}
+ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = species)) +
+  geom_col() +
+pigment::scale_color_stain_d()+
+  labs(title = "color")
+```
+
+
+```{r}
+ggplot(penguins, aes(body_mass_g, flipper_length_mm, colour = body_mass_g)) +
+  geom_point() +
+pigment::scale_colour_stain_seq_c("wood")+
+  labs(title = "Conti")
+
+```
+
+
+```{r}
+ggplot(penguins, aes(body_mass_g, flipper_length_mm, fill = species)) +
+  geom_col() +
+pigment::scale_fill_stain_d(direction = -1)+
+  labs(title = "fill")
+```

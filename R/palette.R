@@ -1,7 +1,9 @@
-# Define colour palette variables and functions here
-
+#' Stain Colours
+#' @examples
+#' stain_colours
+#' @rdname stain_colours
+#' @export stain_colours
 stain_colours <- list(
-  # add your colours as a named list here, i.e.
   "lemon"     = "#FCF404",
   "pink"      = "#EC3C7C",
   "teal"      = "#057277",
@@ -10,6 +12,22 @@ stain_colours <- list(
   "wood"      = "#52292A"
 )
 
+#' stain palette
+#'
+#' @param primary
+#' The default primary color of the stain palette is lemon(Yellow)
+#' @param other
+#' The Other color of the stain palette is wood(dark Brown)
+#' @param direction
+#' Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reverse
+#'
+#' @return
+#'  It will return corresponding hexcode of the colour name to the ggplot
+#' @examples
+#' stain_palette(primary = "lemon", other = "wood", direction = 1)(2)
+#' stain_palette(primary = "lemon", other = "pink", direction = 1)(2)
+#' @rdname stain_palette
+#' @export
 stain_palette <- function(
   primary = "lemon",
   other = "wood",
