@@ -11,7 +11,7 @@ scale_color_stain_d(primary = "lemon", other = "wood", direction = 1, ...)
 
 \item{other}{The default primary color name for the stain palette is "wood"}
 
-\item{direction}{Sets the order of the colors in the scale. If 1, the default; if less than 0 the order of colours is reversed}
+\item{direction}{Sets the order of the colors in the scale. it gives the default order; if less than 0 the order of colours is reversed}
 
 \item{...}{Other parameters that support the scale_color_discrete function}
 }

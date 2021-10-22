@@ -7,11 +7,11 @@
 scale_colour_stain_seq_c(name = "teal", direction = 1, amount = 0.6, ...)
 }
 \arguments{
-\item{name}{The default primary color name for the stain palette is "lemon"}
+\item{name}{The name parameter sets the color for the plot. This will only allow to use colors from the palette, else throws an error.}
 
-\item{direction}{The default primary color name for the stain palette is "wood"}
+\item{direction}{The default direction parameter produce the high luminance colour for the top of the scale.(i.e. lighter colours correspond to higher values).}
 
-\item{amount}{Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reversed}
+\item{amount}{this argument to the function allows the user to define the amount of lightening}
 
 \item{...}{Other parameters that support the scale_colour_continous function}
 }

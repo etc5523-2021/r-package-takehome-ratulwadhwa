@@ -11,7 +11,7 @@ stain_palette(primary = "lemon", other = "wood", direction = 1)
 
 \item{other}{The Other color of the stain palette is wood(dark Brown)}
 
-\item{direction}{Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reverse}
+\item{direction}{Sets the order of the colours in the scale. If 1, it gives the default order; if less than 0 the order of colours is reverse}
 }
 \value{
 It will return corresponding hexcode of the colour name to the ggplot
