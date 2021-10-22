@@ -1,12 +1,11 @@
-
 #' Continuous scale for Stain
 #'
 #' @param name
-#' The default primary color name for the stain palette is "lemon"
+#' The name parameter sets the color for the plot. This will only allow to use colors from the palette, else throws an error.
 #' @param direction
-#' The default primary color name for the stain palette is "wood"
+#' The default direction parameter produce the high luminance colour for the top of the scale.(i.e. lighter colours correspond to higher values).
 #' @param amount
-#' Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reversed
+#' this argument to the function allows the user to define the amount of lightening
 #' @param ...
 #' Other parameters that support the scale_colour_continous function
 #'

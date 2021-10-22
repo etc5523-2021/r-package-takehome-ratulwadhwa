@@ -5,7 +5,7 @@
 #' @param other
 #' The default primary color name for the stain palette is "wood"
 #' @param direction
-#' Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reversed
+#' Sets the order of the colours in the scale. If 1, it gives the default order; if less than 0 the order of colours is reversed
 #' @param ...
 #' Other parameters that support the scale_colour_discrete function
 #'
@@ -37,7 +37,7 @@ scale_colour_stain_d <- function(
 #' @param other
 #' The default primary color name for the stain palette is "wood"
 #' @param direction
-#' Sets the order of the colors in the scale. If 1, the default; if less than 0 the order of colours is reversed
+#' Sets the order of the colors in the scale. it gives the default order; if less than 0 the order of colours is reversed
 #' @param ...
 #' Other parameters that support the scale_color_discrete function
 #'
@@ -59,7 +59,7 @@ scale_color_stain_d <- scale_colour_stain_d
 #' @param other
 #' The default primary color name for the stain palette is "wood"
 #' @param direction
-#' Sets the order of the colours in the scale. If 1, the default; if less than 0 the order of colours is reversed
+#' Sets the order of the colours in the scale. it gives the default order; if less than 0 the order of colours is reversed
 #' @param ...
 #' Other parameters that support the scale_fill_discrete function
 #'
