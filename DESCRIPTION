@@ -1,6 +1,6 @@
 Package: pigment
 Title: The R Package Provides Access To Six Regular Colors
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person(given = "Ratul",
            family = "Wadhwa",
