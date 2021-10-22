@@ -1,16 +1,42 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# packageName
+# packageName- pigment
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of packageName is to …
+Pigment is a substance, which leaves a stain/color when mixed. The goal
+of **pigment** is to provide access to some regular day to day colors.
+The package pigment has one palette- **stain** which includes colors
+like yellow, shades of brown like skin, wood and tan, along with 2
+different colors like teal and dark pink.
 
 ## Installation
 
-You can install the development version of packageName with …
+The development version of *pigment* with palette *stain* can be
+installed in the following way. The result is a set to return
+corresponding hexcode of the colour name to the ggplot. Configuration
+can be confirmed by using seecol(“colossal\_colours”, col\_bg =
+“grey90”, col\_brd = “black”) command.
+
+GitHub\_repo\_url(“<https://github.com/etc5523-2021/r-package-takehome-ratulwadhwa.git>”)
+
+**steps to install pigment package:**
+
+-   install.packages(“devtools”)
+
+-   library(devtools)
+
+-   dev\_mode(on=T)
+
+-   install\_github(“etc5523-2021/r-package-takehome-ratulwadhwa”)
+
+-   when finished do: dev\_mode(on=F)
+
+-   Use install.packages(“pigment”) command to install the package.
+
+-   load library- library(pigment)
 
 ``` r
 install.packages("devtools")
@@ -29,22 +55,23 @@ library(pigment)
 ``` r
 library(pigment)
 library(tidyverse)
-#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-#> ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-#> ✓ tibble  3.1.5     ✓ dplyr   1.0.7
-#> ✓ tidyr   1.1.4     ✓ stringr 1.4.0
-#> ✓ readr   2.0.2     ✓ forcats 0.5.1
-#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
 library(ggplot2)
 library(palmerpenguins)
 
-ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = species)) +
+ggplot(penguins, aes(body_mass_g, flipper_length_mm, fill = species)) +
   geom_col() +
-pigment::scale_color_stain_d()+
-  labs(title = "color")
-#> Warning: Removed 2 rows containing missing values (position_stack).
+pigment::scale_fill_stain_d()+
+  labs(title = "Example of Color palette: shows first three colors of the palette")
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+``` r
+ggplot(penguins, aes(bill_length_mm, bill_depth_mm, colour = body_mass_g)) +
+  geom_point() +
+   theme_bw()+
+pigment::scale_colour_stain_seq_c("wood")+
+  labs(title = "Example of Continuous Color: wood")
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
